@@ -4,7 +4,6 @@ import rootReducer from './rootReducer';
 
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const applyMiddleware = require('redux').applyMiddleware;
 const rootStore = createStore(rootReducer, composeEnhancers(
   applyMiddleware(
     promiseMiddleware()

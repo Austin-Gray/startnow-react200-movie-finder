@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
-import searchReducers from './components/Search/searchReducers';
-import resultReducers from './components/Result/resultReducers';
-import detailReducers from './components/Detail/detailReducers';
+import searchReducer from './components/Search/SearchReducer';
+//import resultReducer from './components/Result/resultReducer';
+//import detailReducer from './components/Detail/detailReducer';
 
 const rootReducer = combineReducers({
-    search: searchReducers,
-    result: resultReducers,
-    detail: detailReducers
+    search: searchReducer,
+//    result: resultReducer,
+//    detail: detailReducer
 });
 
 export default rootReducer;
