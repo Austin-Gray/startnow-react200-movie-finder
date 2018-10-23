@@ -3,7 +3,7 @@ import Detail from './Detail';
 
 function mapStoreToProps(store) {
     return {
-        movieSearch: store.search.movieSearch,
+        movie: store.detail.movie,
     };
 }
 

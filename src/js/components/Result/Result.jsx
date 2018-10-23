@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default class Search extends React.Component {
+export default class Result extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-        const { movies} = this.props;
+        const { movies } = this.props;
         return (
             <div className='container m-0 p-0'>
                 <div className='row'>
@@ -23,6 +24,7 @@ export default class Search extends React.Component {
                                             <h5>{movie.Title}</h5>
                                             <p>{movie.Year}</p>
                                             <hr></hr>
+                                            <Link to={`/movie/${movie.imdbID}`}>Read more</Link>
                                         </div>
                                     </div>
                                 </div>
