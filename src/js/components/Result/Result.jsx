@@ -15,6 +15,7 @@ export default class Result extends React.Component {
                 </div>
                 <ul className='row justify-content-center p-0 m-0'>
                     {
+                        movies ?
                         movies.map(movie => (
                             <li className='bg-light border border-dark col-12 mt-3 mb-3'>
                                 <div className='container'>
@@ -24,12 +25,14 @@ export default class Result extends React.Component {
                                             <h5>{movie.Title}</h5>
                                             <p>{movie.Year}</p>
                                             <hr></hr>
-                                            <Link to={`/movie/${movie.imdbID}`}>Read more</Link>
+                                            <Link className='detail-link' to={`/movie/${movie.imdbID}`}>Read more</Link>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                         ))
+                        :
+                        <h1 className='error-message'>Movie not found!</h1>
                     }
                 </ul>
             </div>

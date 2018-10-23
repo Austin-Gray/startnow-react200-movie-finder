@@ -18,7 +18,8 @@ export default class Search extends React.Component {
         dispatch(updateMovie(value));
     }
 
-    handleSearch() {
+    handleSearch(e) {
+        e.preventDefault();
         const { dispatch, movieSearch } = this.props;
         dispatch(getMovie(movieSearch))
     }
@@ -27,14 +28,16 @@ export default class Search extends React.Component {
         const { movieSearch } = this.props;
         return (
             <div className='container'>
-                <div className='row'>
-                    <div className='input-group'>
-                        <input type='text' className='form-control' placeholder='Search' value={ movieSearch } onChange={ this.handleMovieInput }/>
-                        <div className='input-group-append'>
-                            <button className='btn btn-outline-secondary' type='button' onClick={ this.handleSearch }>Go!</button>
+                <form onSubmit={ this.handleSearch } >
+                    <div className='row'>
+                        <div className='input-group'>
+                            <input autoComplete='false' required type='text' className='form-control' name='search' placeholder='Search' value={ movieSearch } onChange={ this.handleMovieInput }/>
+                            <div className='input-group-append'>
+                                <button className='btn btn-outline-secondary' id='search' type='submit'>Go!</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         )
     }

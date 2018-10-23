@@ -21,7 +21,7 @@ export default class Result extends React.Component {
                         <div className='row'>
                             <img className='detail col-5 mt-3 mb-3' src={movie.Poster}></img>
                             <div className='col-7 mt-3 mb-3'>
-                                <h2>{movie.Title}</h2>
+                                <h2 id='title'>{movie.Title}</h2>
                                 <p>{movie.Year}</p>
                                 <p>{movie.Rated}</p>
                                 <hr></hr>
@@ -29,10 +29,10 @@ export default class Result extends React.Component {
                                 <br></br>
                                 <p>{movie.Awards}</p>
                                 <br></br>
-                                <h6>Metascore: {movie.Metascore}/100</h6>
+                                <h6 className='metascore'>Metascore: {movie.Metascore}/100</h6>
                                 <h6>IMDB: {movie.imdbRating}/10</h6>
                                 <br></br>
-                                <Link className='jusitfy-self-center' to='/'>Return to Search</Link>
+                                <Link className='home-link' to='/'>Return to Search</Link>
                             </div>
                         </div>
                     </div>
