@@ -3,7 +3,7 @@ import Result from './Result';
 
 function mapStoreToProps(store) {
     return {
-        movieSearch: store.search.movieSearch,
+        movies: store.search.movies,
     };
 }
 
